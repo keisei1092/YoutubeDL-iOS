@@ -22,14 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
         splitViewController.delegate = self
         print("Download manager: \(DownloadManager.sharedDownloadManager)")
-        
+
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+			try AVAudioSession.sharedInstance().setActive(true)
         } catch {
             print("Error setting type: \(error)")
         }
-        
-        
+
         return true
     }
 

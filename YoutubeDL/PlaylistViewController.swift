@@ -14,6 +14,7 @@ import SDWebImage
 
 class PlaylistViewController: UITableViewController {
     var playlist: Playlist?
+	private var player: AVPlayer!
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return playlist?.videos.count ?? 0
@@ -46,7 +47,6 @@ class PlaylistViewController: UITableViewController {
         }
         return linkLocation
     }
-    
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showVideo" {
@@ -58,7 +58,7 @@ class PlaylistViewController: UITableViewController {
                 let controller = segue.destination as! AVPlayerViewController
                 
                 /// <#Description#>
-                let player = AVPlayer(url: playerUrl(video: video))
+                player = AVPlayer(url: playerUrl(video: video))
                 if video.watchedPosition > 0 {
                     player.seek(to: CMTime(seconds: Double(video.watchedPosition), preferredTimescale: 1))
                 }
@@ -112,4 +112,23 @@ class PlaylistViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
+
+	override func remoteControlReceived(with event: UIEvent?) {
+		guard let event = event else { return }
+
+		switch event.subtype {
+		case .remoteControlTogglePlayPause:
+			if player?.rate == 0 {
+				player?.play()
+			} else {
+				player?.pause()
+			}
+		case .remoteControlPlay:
+			player?.play()
+		case .remoteControlPause:
+			player?.pause()
+		default:
+			break
+		}
+	}
 }
