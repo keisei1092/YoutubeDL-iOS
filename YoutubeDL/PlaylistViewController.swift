@@ -10,7 +10,7 @@ import UIKit
 import AVKit
 import AVFoundation
 import Dispatch
-import WebImage
+import SDWebImage
 
 class PlaylistViewController: UITableViewController {
 

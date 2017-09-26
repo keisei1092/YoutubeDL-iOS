@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		457D0C8E1F7A44F700E22EB5 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 457D0C8D1F7A44F700E22EB5 /* SDWebImage.framework */; };
 		7705444F1D9FFB8100A8EFF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7705444E1D9FFB8100A8EFF0 /* AppDelegate.swift */; };
 		770544511D9FFB8100A8EFF0 /* PlaylistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770544501D9FFB8100A8EFF0 /* PlaylistsViewController.swift */; };
 		770544531D9FFB8100A8EFF0 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770544521D9FFB8100A8EFF0 /* PlaylistViewController.swift */; };
@@ -35,7 +36,6 @@
 		775DD8B41DA18269009818F1 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DD8A11DA02093009818F1 /* Video.swift */; };
 		775DD8B51DA18269009818F1 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DD8AA1DA05A89009818F1 /* DataStore.swift */; };
 		775DD8B61DA18269009818F1 /* DownloadProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DD8AC1DA06AAE009818F1 /* DownloadProgress.swift */; };
-		77ABF8B11DA290C50004858E /* WebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77ABF8B01DA290C50004858E /* WebImage.framework */; };
 		77ABF8B41DA2967C0004858E /* VideoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ABF8B31DA2967C0004858E /* VideoViewCell.swift */; };
 		77ABF8B61DA937B00004858E /* youtube_dl in Copy Python Code */ = {isa = PBXBuildFile; fileRef = 77ABF8B51DA937B00004858E /* youtube_dl */; };
 /* End PBXBuildFile section */
@@ -73,6 +73,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		457D0C8D1F7A44F700E22EB5 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		7705444B1D9FFB8100A8EFF0 /* YoutubeDL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeDL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7705444E1D9FFB8100A8EFF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		770544501D9FFB8100A8EFF0 /* PlaylistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistsViewController.swift; sourceTree = "<group>"; };
@@ -119,7 +120,7 @@
 				775DD88B1DA00339009818F1 /* libz.tbd in Frameworks */,
 				775DD8891DA00303009818F1 /* libcompression.tbd in Frameworks */,
 				775DD8871DA002EE009818F1 /* libsqlite3.tbd in Frameworks */,
-				77ABF8B11DA290C50004858E /* WebImage.framework in Frameworks */,
+				457D0C8E1F7A44F700E22EB5 /* SDWebImage.framework in Frameworks */,
 				775DD87C1D9FFEE9009818F1 /* BZip2.framework in Frameworks */,
 				775DD87D1D9FFEE9009818F1 /* OpenSSL.framework in Frameworks */,
 				775DD87E1D9FFEE9009818F1 /* Python.framework in Frameworks */,
@@ -210,6 +211,7 @@
 		775DD86C1D9FFD9D009818F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				457D0C8D1F7A44F700E22EB5 /* SDWebImage.framework */,
 				77ABF8B01DA290C50004858E /* WebImage.framework */,
 				775DD8A31DA0299A009818F1 /* AVKit.framework */,
 				775DD88A1DA00339009818F1 /* libz.tbd */,
@@ -402,7 +404,7 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/WebImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
 			);
 			name = "Copy Carthage Frameworks";
 			outputPaths = (
