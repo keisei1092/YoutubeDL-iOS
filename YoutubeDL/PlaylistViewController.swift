@@ -59,6 +59,7 @@ class PlaylistViewController: UITableViewController {
                 
                 /// <#Description#>
                 player = AVPlayer(url: playerUrl(video: video))
+				player.repeatMode = .All
                 if video.watchedPosition > 0 {
                     player.seek(to: CMTime(seconds: Double(video.watchedPosition), preferredTimescale: 1))
                 }
