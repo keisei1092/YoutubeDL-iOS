@@ -13,25 +13,10 @@ import Dispatch
 import SDWebImage
 
 class PlaylistViewController: UITableViewController {
-
     var playlist: Playlist?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        print("Loaded Subcontroller...")
-        // Do any additional setup after loading the view, typically from a nib.
-        // self.configureView()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return playlist?.videos.count ?? 0;
+        return playlist?.videos.count ?? 0
     }
     
     @IBAction func refreshPlaylist(_ sender: UIRefreshControl) {
@@ -60,7 +45,6 @@ class PlaylistViewController: UITableViewController {
             }
         }
         return linkLocation
-        
     }
     
 
@@ -128,6 +112,4 @@ class PlaylistViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
-
 }
-
