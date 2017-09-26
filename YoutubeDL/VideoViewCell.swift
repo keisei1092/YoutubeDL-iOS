@@ -12,6 +12,11 @@ class VideoViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var detail: UILabel!
     @IBOutlet weak var thumbnail: UIImageView!
+
+	override func awakeFromNib() {
+		super.awakeFromNib()
+		thumbnail.layer.borderColor = UIColor.lightGray.cgColor
+	}
     
     func detailText(video: Video) -> String {
         if video.hasBeenDownloaded() {

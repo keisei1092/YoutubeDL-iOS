@@ -129,6 +129,11 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="HXr-wb-El0" secondAttribute="height" multiplier="16:9" id="PqB-aD-qmM"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="aKf-Xa-auF">
                                             <rect key="frame" x="122" y="8" width="245" height="63.5"/>
